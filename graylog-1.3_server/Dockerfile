@@ -41,7 +41,7 @@ RUN         sed -i 's/gs_master/true/'                                          
       &&    sed -i 's/gs_replicas/1/'                                               /etc/graylog/server/server.conf \
       &&    sed -i 's/gs_index_prefix/testing/'                                     /etc/graylog/server/server.conf \
       &&    sed -i 's/gs_cluster_name/graylog/'                                     /etc/graylog/server/server.conf \
-      &&    sed -i 's/gs_node_master/true/'                                         /etc/graylog/server/server.conf \
+      &&    sed -i 's/gs_node_master/false/'                                        /etc/graylog/server/server.conf \
       &&    sed -i 's/gs_node_data/false/'                                          /etc/graylog/server/server.conf \
       &&    sed -i 's/gs_transport_tcp_port/9350/'                                  /etc/graylog/server/server.conf \
       &&    sed -i 's/gs_unicast/172\.17\.0\.1:9300/'                               /etc/graylog/server/server.conf \
@@ -56,10 +56,7 @@ RUN         apt-get   -y    clean                                               
 EXPOSE   12900                    \
          443     443/udp          \
          12201   12201/udp        \
-         514     514/udp          \
-         4000    4000/udp         \
-         5000    5000/udp         \
-         6000    6000/udp
+         514     514/udp
 
 # Mounting the Volumes
 VOLUME ["/var/log/graylog-server", "/etc/graylog"]
