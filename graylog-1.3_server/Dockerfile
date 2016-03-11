@@ -5,7 +5,7 @@ FROM            vaibhavtodi/java:1.0
 MAINTAINER      "Vaibhav Todi"    <vaibhavtodi1989@gmail.com>
 
 # Specifing the Label
-LABEL           Description="DOCKER IMAGE WHERE GRAYLOG-SERVER IS SETUP"                                            \
+LABEL           Description="DOCKER IMAGE WHERE GRAYLOG-SERVER IS SETUP"                                             \
                 Version="1.3"
 
 # Setting the ENV variable

@@ -3,6 +3,8 @@ exec 2>&1
 
 export JAVA=/usr/lib/jvm/java-7-oracle
 export JAVA_HOME=/usr/bin/java
+
+# Setting all Java options
 export GRAYLOG_SERVER_JAVA_OPTS="-Xms1g -Xmx1500m -XX:NewRatio=1 -XX:PermSize=128m -XX:MaxPermSize=256m -server -XX:+ResizeTLAB -XX:+UseConcMarkSweepGC -XX:+CMSConcurrentMTEnabled -XX:+CMSClassUnloadingEnabled -XX:+UseParNewGC -XX:-OmitStackTraceInFastThrow"
 
 # Starting the  Graylog-Server Service
